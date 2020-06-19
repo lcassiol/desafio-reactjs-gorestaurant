@@ -54,6 +54,7 @@ const Dashboard: React.FC = () => {
     // TODO UPDATE A FOOD PLATE ON THE API
     const { data } = await api.put(`foods/${editingFood.id}`, {
       ...food,
+      id: editingFood.id,
       available: editingFood.available,
     });
 
